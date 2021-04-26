@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Wooden</title>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Atma&display=swap" rel="stylesheet">
+      <meta name="description" content="A webpage in the making">
+      <meta name="keywords" content="Wooden, Henry Heivly">
+      <meta name="author" content="Henry Heivly">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="application-name" content="Wooden.com">
+      <style>
+  /* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid red;
+  border-right: 16px solid yellow;
+  border-bottom: 16px solid green;
+  border-left: 16px solid blue;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+
+        #myDiv {
+          display: none;
+          text-align: center;
+        }
+        nav {
+          background-color: rgb(145, 74, 33);
+          font-family: "Atma";
+          text-align: center;
+          position: fixed;
+          z-index: 1 !important;
+        }
+        body {
+          background-color: rgb(47, 47, 222);
+          z-index: 0;
+          color: olive
+        }
+        ::select {
+          background-color: lime;
+          color: red;
+        }
+        @keyframes stuff {
+	        50% {
+            transform: rotate(180deg);
+          }
+          100% {
+            transform: rotate(180deg);
+          }
+        }
+        nav a:hover {
+          background-color: orange !important;
+          text-decoration: none !important;
+          animation-name: stuff;
+          animation-duration: 3s;
+          animation-iteration-count: 1;
+        }
+        a {
+          text-decoration: none !important;
+          color: default;
+        }
+    </style>
+    </head>
+    <body onload="myFunction()" style="margin:0;">
+      <div id="loader"></div>
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+      <nav>
+        <a href="index.html">Home</a> <a href="about.html">About</a> <a href="other.html">Other</a>
+      </nav>
+    </div>
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+    
+
+
+    </body>
+</html>
